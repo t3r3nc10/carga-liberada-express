@@ -162,6 +162,11 @@ function LiberacaoCarga() {
   const [conferente, setConferente] = useState("");
   const [observacoes, setObservacoes] = useState("");
 
+  const [planilha, setPlanilha] = useState<Record<string, string>[]>([]);
+useEffect(() => {
+  carregarItens().then(setPlanilha).catch(console.error);
+}, []);
+
   const [saving, setSaving] = useState(false);
   const syncToSharePoint = useServerFn(syncReleaseToSharePoint);
   const [erro, setErro] = useState<string | null>(null);
