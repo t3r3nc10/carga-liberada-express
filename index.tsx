@@ -1,3 +1,5 @@
+import { carregarItens } from "@/lib/planilha"; // ou "../lib/planilha", conforme o seu projeto
+
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
